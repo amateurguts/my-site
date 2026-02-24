@@ -11,11 +11,10 @@ def index():
 def about():
     return render_template('about.html')
 
-@app.route('/<path:path>')
-def static_proxy(path):
-    # Исправленный return
-    return send_from_directory('.', path)
-
+@app.route('/static/<path:filename>')
+def serve_static(filename):
+    return send_from_directory('static', filename)
+    
 # Это нужно для локального запуска
 if __name__ == "__main__":
     app.run(debug=True)
