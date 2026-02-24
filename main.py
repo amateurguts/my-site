@@ -11,6 +11,7 @@ def index():
 def about():
     return render_template('about.html')
 
+# Это поможет Vercel отдавать картинки и стили напрямую
 @app.route('/<path:path>')
-def send_static(path):
+def static_proxy(path):
     return send_from_directory('.', path)
