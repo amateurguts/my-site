@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>EduScan Project</title>
+</head>
+<body>
+    <div class="card">
+        <h1>EduScan 🔍</h1>
+        <p>Инструмент для проверки источников</p>
+        
+        <form action="/scan" method="POST">
+            <input type="text" name="url" placeholder="Введите домен (например, google.com)" required>
+            <button type="submit">Начать анализ</button>
+        </form>
+
+        {% if result %}
+        <div class="result-box">
+            <strong>Результат:</strong><br>
+            {{ result }}
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
+<button type="submit">Начать анализ</button>
+
+            <a href="/about" class="about-button">О проекте и авторе</a> 
+            </form>
+
+        {% if result %}
+        <div class="result-box">
+            <strong>Результат:</strong><br>
+            {{ result }}
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>

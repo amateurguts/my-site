@@ -1,0 +1,127 @@
+body {
+    background-color: #0d1117;
+    color: #c9d1d9;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+}
+
+.card {
+    background-color: #161b22;
+    padding: 30px;
+    border-radius: 10px;
+    border: 1px solid #30363d;
+    width: 320px;
+    text-align: center;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 15px 0;
+    background: #0d1117;
+    border: 1px solid #30363d;
+    color: white;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #238636;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.result-box {
+    margin-top: 20px;
+    padding: 10px;
+    background: #21262d;
+    border-left: 4px solid #58a6ff;
+    font-size: 14px;
+}
+/* ... предыдущие стили ... */
+
+.about-button {
+    display: block; /* Чтобы кнопка занимала всю ширину */
+    width: 100%;
+    padding: 10px;
+    margin-top: 15px; /* Отступ от кнопки анализа */
+    background-color: #8957e5; /* Фиолетовый цвет для отличия */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: none; /* Убираем подчеркивание у ссылки */
+    box-sizing: border-box; /* Учитываем padding в ширине */
+}
+
+.about-button:hover {
+    background-color: #926ee6;
+}
+
+.back-button {
+    position: absolute; /* Позиционируем относительно родителя (.card) */
+    top: 20px;
+    left: 20px;
+    color: #58a6ff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+/* Стили для изображений */
+.author-photo, .code-screenshot {
+    max-width: 100%; /* Картинки не будут вылезать за пределы карточки */
+    height: auto; /* Сохраняем пропорции */
+    margin: 10px 0;
+    border-radius: 8px;
+    border: 1px solid #30363d;
+}
+
+/* Если хотим, чтобы .card был родителем для position: absolute; */
+.card {
+    position: relative; 
+    /* ... остальные стили .card ... */
+}
+
+h2, h3 {
+    color: #58a6ff;
+    margin-top: 20px;
+}
+p {
+    text-align: left;
+    margin-bottom: 10px;
+    line-height: 1.5;
+    font-size: 0.95em;
+}
+/* Контейнер для фото, чтобы всё было по центру */
+.photo-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* Настройки для твоего фото (сделаем его круглым) */
+.img-main {
+    width: 150px; 
+    height: 150px;
+    object-fit: cover; /* Чтобы лицо не сплющило */
+    border-radius: 50%; /* Круглая форма */
+    border: 3px solid #58a6ff; /* Голубая рамка под стиль сайта */
+    margin-bottom: 15px;
+}
+
+/* Настройки для скриншотов кода */
+.img-side {
+    width: 90%; /* Почти на всю ширину карточки */
+    max-width: 400px;
+    border-radius: 8px;
+    margin-top: 10px;
+    border: 1px solid #30363d;
+}

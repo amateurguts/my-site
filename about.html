@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Об авторе</title>
+</head>
+<body>
+    <div class="card">
+        <a href="/" style="color: #58a6ff; text-decoration: none; float: left;">← Назад</a>
+        <br>
+        <h1>О создателе</h1>
+        <p>Я,Элибаев Давид из 8г класса.
+            классный руководитель:Волкова Елена Николаевна,я создатель проекта: EduScan.</p>
+        
+        <div style="background: #0d1117; padding: 20px; border-radius: 10px; margin: 10px 0;">
+            <div class="photo-container">
+    <img src="{{ url_for('static', filename='me.jpg') }}" class="img-main">
+    
+    <p>Скриншоты процесса разработки:</p>
+    
+    <img src="{{ url_for('static', filename='screen1.jpg') }}" class="img-side">
+    <img src="{{ url_for('static', filename='screen2.jpg') }}" class="img-side">
+</div>
+
+        </div>
+
+        <p>Этот проект создан на Python с использованием Flask.</p>
+    </div>
+</body>
+</html>
